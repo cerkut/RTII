@@ -1,4 +1,4 @@
-#N canvas 131 88 776 615 10;
+#N canvas 131 88 781 629 10;
 #X obj 30 99 send test1;
 #X obj 26 161 receive test1;
 #X floatatom 29 78 5 0 0 0 - - -;
@@ -15,7 +15,7 @@
 #X floatatom 373 185 5 0 0 0 - - -;
 #X floatatom 413 184 5 0 0 0 - - -;
 #X obj 153 161 r test2;
-#X obj 26 9 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 26 9 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 45 10 SEND & RECEIVE;
 #X floatatom 207 183 5 0 0 0 - - -;
@@ -23,15 +23,15 @@
 #X text 27 35 Send & receive objects allow you to send values without
 connecting the objects with wires.;
 #X floatatom 486 75 5 0 0 0 - - -;
-#X obj 484 15 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 484 15 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 503 16 SEND~ & RECEIVE~;
 #X obj 487 99 osc~ 330;
-#X obj 645 217 dac~;
-#X obj 644 187 r~ osc1;
+#X obj 579 185 dac~;
+#X obj 578 155 r~ osc1;
 #X obj 486 263 s~ osc1;
 #X text 481 43 For audio;
-#X obj 27 239 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 27 239 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 45 241 THROW~ & CATCH~;
 #X text 156 123 s and r work just as well;
@@ -57,7 +57,7 @@ object (but two catch~ objects cannot share the same name.);
 #X obj 501 146 vsl 20 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X text 537 264 send the signal;
-#X text 640 168 receive the signal;
+#X text 574 136 receive the signal;
 #X obj 346 575 cnv 15 400 25 empty empty AAU_CPH_Credits: 20 12 1 14
 -33173 -262144 0;
 #X connect 1 0 3 0;

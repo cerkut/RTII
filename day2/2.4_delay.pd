@@ -1,4 +1,4 @@
-#N canvas 378 231 832 603 10;
+#N canvas 378 231 709 508 10;
 #X obj 35 55 adc~;
 #X obj 306 476 dac~;
 #X obj 36 421 delwrite~ delay1 1000;
@@ -15,16 +15,11 @@
 #X obj 321 328 vsl 20 40 0 1 0 0 empty empty empty 0 -9 0 10 -262144
 -1 -1 0 1;
 #X obj 306 449 *~;
-#X msg 333 548 \; pd dsp \$1 \;;
-#X obj 333 526 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X msg 340 38 \; pd dsp \$1 \;;
+#X obj 341 16 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 93 223 feedback;
 #X text 345 355 main volume;
-#X obj 411 480 cnv 15 400 100 empty empty empty 20 12 0 14 -175625
--66577 0;
-#X text 448 524 Media Lab \, Department of Media;
-#X text 447 510 Sound and Music Computing - AAU-CPH Credits: SOPI Research
-Group;
 #X text 46 114 This delay effect - no pitch change;
 #X obj 452 329 +~;
 #X obj 467 301 *~;
@@ -45,7 +40,7 @@ Group;
 #X obj 107 314 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 130 315 Delay on/off;
-#X obj 35 3 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 35 3 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 54 5 DELAY;
 #X text 74 55 Analog to digital converter (audio input);
@@ -53,12 +48,10 @@ Group;
 #X floatatom 609 87 5 0 0 0 - - -;
 #X msg 465 114 \$1 50;
 #X obj 466 136 vline~;
-#X text 449 539 Aalto University School of Arts \, Design and Architecture
-;
 #X connect 0 0 5 0;
-#X connect 0 0 22 0;
+#X connect 0 0 19 0;
 #X connect 3 0 5 1;
-#X connect 3 0 35 0;
+#X connect 3 0 32 0;
 #X connect 4 0 9 0;
 #X connect 5 0 2 0;
 #X connect 6 0 3 1;
@@ -71,18 +64,18 @@ Group;
 #X connect 13 0 1 0;
 #X connect 13 0 1 1;
 #X connect 15 0 14 0;
-#X connect 22 0 26 0;
-#X connect 23 0 22 1;
-#X connect 23 0 27 0;
-#X connect 24 0 43 0;
-#X connect 25 0 23 0;
-#X connect 27 1 13 0;
-#X connect 28 0 27 1;
-#X connect 30 0 23 1;
-#X connect 31 0 30 0;
-#X connect 32 0 31 0;
-#X connect 35 1 13 0;
-#X connect 36 0 35 1;
-#X connect 42 0 41 0;
-#X connect 43 0 44 0;
-#X connect 44 0 25 0;
+#X connect 19 0 23 0;
+#X connect 20 0 19 1;
+#X connect 20 0 24 0;
+#X connect 21 0 40 0;
+#X connect 22 0 20 0;
+#X connect 24 1 13 0;
+#X connect 25 0 24 1;
+#X connect 27 0 20 1;
+#X connect 28 0 27 0;
+#X connect 29 0 28 0;
+#X connect 32 1 13 0;
+#X connect 33 0 32 1;
+#X connect 39 0 38 0;
+#X connect 40 0 41 0;
+#X connect 41 0 22 0;

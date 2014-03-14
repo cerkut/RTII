@@ -1,4 +1,4 @@
-#N canvas 405 22 875 1153 10;
+#N canvas 170 22 901 852 10;
 #X obj 31 -10 cnv 15 800 40 empty empty SAMPLE_MANIPULATION 20 12 0
 14 -33173 -262144 0;
 #X obj 37 111 openpanel;
@@ -12,14 +12,14 @@
 #X floatatom 37 178 7 0 0 1 Number_of_samples_in_file - -;
 #X obj 159 207 / 44.1;
 #X floatatom 159 232 7 0 0 1 Sound_File_length_in_ms - -;
-#X msg 183 260 \; dura range 0 \$1 \;;
+#X msg 188 254 \; dura range 0 \$1 \;;
 #X msg 714 68 \; pd dsp \$1 \;;
 #X obj 714 47 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X obj 34 57 cnv 15 150 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 34 57 cnv 15 150 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 49 57 Open Sound File;
-#X obj 41 330 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 41 330 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X obj 46 382 tgl 15 0 empty empty playback_on/off 17 7 0 10 -262144
 -1 -1 0 1;
@@ -44,7 +44,7 @@
 -8 0 10 -262144 -1 -1 0 1;
 #X obj 250 573 *;
 #X obj 261 549 t b f;
-#X obj 248 330 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 248 330 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 48 331 Using [vline~] for playback;
 #X obj 46 684 *~;
@@ -61,8 +61,8 @@
 #X connect 4 0 0 0;
 #X coords 0 -1 1 1 20 55 2 100 100;
 #X restore 75 620 pd volume;
-#X obj 46 1059 biquad~;
-#X obj 248 841 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 46 1034 biquad~;
+#X obj 248 841 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 258 331 Control over sample playback;
 #X text 258 842 Settings for [biquad~] filter;
@@ -75,8 +75,8 @@
 #X obj 259 1017 equalizer 5000 70 8;
 #X obj 343 985 t b f;
 #X obj 287 985 t b f;
-#X obj 46 1112 dac~;
-#X obj 553 330 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 46 1087 dac~;
+#X obj 553 330 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 572 330 Audio in;
 #X obj 596 363 adc~;
@@ -89,7 +89,7 @@
 #X text 646 440 start recording;
 #X text 661 464 stop recording;
 #X obj 609 413 s~ \$0-rec2;
-#X obj 553 625 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 553 625 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 572 625 Recording;
 #X msg 518 742 start;
@@ -103,7 +103,7 @@
 #X text 519 701 start/stop;
 #X text 522 717 recording;
 #X text 605 836 writes recieved audio to a soundfile;
-#X obj 248 625 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 248 625 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 258 626 Delay Effect;
 #X obj 46 763 +~;
@@ -113,16 +113,9 @@
 #X floatatom 266 702 7 0 0 0 - - -;
 #X obj 269 685 hsl 128 15 0 0.99 0 0 empty empty Delay_in_ms -2 -8
 0 10 -262144 -1 -1 0 1;
-#X obj 431 1031 cnv 15 400 100 empty empty empty 20 12 0 14 -175625
--66577 0;
-#X text 458 1069 Media Lab \, Department of Media;
-#X text 457 1055 Sound and Music Computing - AAU-CPH Credits: SOPI Research
-Group;
-#X text 459 1084 Aalto University School of Arts \, Design and Architecture
-;
-#X obj 78 1086 s~ \$0-rec1;
+#X obj 78 1061 s~ \$0-rec1;
 #X text 680 413 Sends audio to recorder;
-#X text 148 1086 Sends audio to recorder;
+#X text 148 1066 Sends audio to recorder;
 #X obj 250 471 abs;
 #X connect 1 0 21 0;
 #X connect 3 0 1 0;
@@ -140,7 +133,7 @@ Group;
 #X connect 18 0 16 1;
 #X connect 19 0 31 0;
 #X connect 21 0 4 0;
-#X connect 22 0 87 0;
+#X connect 22 0 83 0;
 #X connect 23 0 22 0;
 #X connect 23 1 22 1;
 #X connect 25 0 26 0;
@@ -156,7 +149,7 @@ Group;
 #X connect 36 0 35 1;
 #X connect 37 0 47 0;
 #X connect 37 0 47 1;
-#X connect 37 0 84 0;
+#X connect 37 0 80 0;
 #X connect 41 0 44 0;
 #X connect 42 0 46 0;
 #X connect 43 0 45 0;
@@ -186,4 +179,4 @@ Group;
 #X connect 77 0 74 1;
 #X connect 78 0 76 0;
 #X connect 79 0 78 0;
-#X connect 87 0 19 0;
+#X connect 83 0 19 0;

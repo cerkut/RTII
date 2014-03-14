@@ -1,4 +1,4 @@
-#N canvas 372 143 822 753 10;
+#N canvas 334 22 790 626 10;
 #X msg 23 -61 \; pd dsp \$1 \;;
 #X obj 23 -83 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
@@ -6,67 +6,60 @@
 #X array sample 231492 float 2;
 #X coords 0 1 231492 -1 200 140 1;
 #X restore 25 26 graph;
-#X obj 364 78 soundfiler;
-#X obj 365 -17 openpanel;
-#X obj 365 -36 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 334 80 soundfiler;
+#X obj 335 -15 openpanel;
+#X obj 335 -34 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 426 -18 open file dialog;
-#X text 508 10 read the file and resize the array;
-#X text 560 36 you can also write the name of the file;
-#X text 435 75 writes the file to the array;
-#X obj 30 347 tabplay~ sample;
-#X obj 22 274 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X text 396 -16 open file dialog;
+#X text 478 12 read the file and resize the array;
+#X text 530 38 you can also write the name of the file;
+#X text 405 77 writes the file to the array;
+#X obj 30 297 tabplay~ sample;
+#X obj 22 224 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
-#X obj 21 -13 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 21 -13 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 40 -11 Load a sample to an array;
-#X text 41 276 TABPLAY~ (simple playback);
-#X obj 31 406 dac~;
+#X text 41 226 TABPLAY~ (simple playback);
+#X obj 31 356 dac~;
 #X text 23 168 we are loading the sample to just one array (mono);
-#X obj 29 317 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 29 267 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X msg 365 10 read -resize \$1 sample;
-#X msg 377 38 read -resize break.wav sample;
-#X obj 116 371 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X msg 335 12 read -resize \$1 sample;
+#X msg 347 40 read -resize break.wav sample;
+#X obj 116 321 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X text 117 387 A bang is sent at the end of the file.;
-#X obj 162 343 spigot;
-#X obj 194 322 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X text 117 337 A bang is sent at the end of the file.;
+#X obj 162 293 spigot;
+#X obj 194 272 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X text 213 320 loop on/off;
-#X text 116 403 Can be used to loop the file.;
-#X obj 457 255 cnv 15 200 20 empty empty empty 20 12 0 14 -33173 -262144
+#X text 213 270 loop on/off;
+#X text 116 353 Can be used to loop the file.;
+#X obj 357 225 cnv 15 200 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
-#X text 476 257 TABREAD4~ (advanced playback);
-#X obj 467 460 tabread4~ sample;
-#X obj 468 501 dac~;
-#X floatatom 415 100 12 0 0 0 - - -;
-#X text 492 100 number of samples;
-#X obj 468 376 phasor~;
-#X obj 468 428 *~;
-#X obj 485 408 r samplesize;
-#X obj 416 125 s samplesize;
-#X obj 362 146 expr 44100 / $f1;
-#X floatatom 361 171 5 0 0 0 - - -;
-#X obj 361 195 s rate;
-#X floatatom 468 334 5 0 0 0 - - -;
-#X text 398 170 playback rate;
-#X msg 507 352 0;
-#X text 541 355 go to the beginning.;
-#X obj 471 314 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -8 0 10
+#X text 376 227 TABREAD4~ (advanced playback);
+#X obj 367 430 tabread4~ sample;
+#X obj 368 471 dac~;
+#X floatatom 385 102 12 0 0 0 - - -;
+#X text 462 102 number of samples;
+#X obj 368 346 phasor~;
+#X obj 368 398 *~;
+#X obj 385 378 r samplesize;
+#X obj 386 127 s samplesize;
+#X obj 332 148 expr 44100 / $f1;
+#X floatatom 331 171 5 0 0 0 - - -;
+#X obj 331 195 s rate;
+#X floatatom 368 304 5 0 0 0 - - -;
+#X text 368 170 playback rate;
+#X msg 407 322 0;
+#X text 441 325 go to the beginning.;
+#X obj 371 284 hsl 128 15 -0.5 0.5 0 0 empty empty empty -2 -8 0 10
 -262144 -1 -1 0 1;
-#X obj 467 290 r rate;
-#X obj 333 140 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 367 260 r rate;
+#X obj 303 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 420 313 0;
-#X text 414 296 stop;
-#X obj 399 544 cnv 15 400 100 empty empty empty 20 12 0 14 -175625
--66577 0;
-#X text 421 585 Media Lab \, Department of Media;
-#X text 420 571 Sound and Music Computing - AAU-CPH Credits: SOPI Research
-Group;
-#X text 422 600 Aalto University School of Arts \, Design and Architecture
-;
+#X msg 320 283 0;
+#X text 314 266 stop;
 #X connect 1 0 0 0;
 #X connect 3 0 36 0;
 #X connect 3 0 30 0;

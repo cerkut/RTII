@@ -1,8 +1,8 @@
-#N canvas 471 127 1027 708 10;
+#N canvas 207 22 652 710 10;
 #X declare -lib flatgui/knob;
 #X obj 46 459 dac~;
-#X msg 592 108 \; pd dsp \$1;
-#X obj 592 84 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X msg 423 86 \; pd dsp \$1;
+#X obj 423 62 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 44 397 *~;
 #N canvas 0 22 450 300 (subpatch) 0;
@@ -79,16 +79,16 @@
 #X coords 0 1 499 -1 200 140 1 0 0;
 #X restore 382 528 graph;
 #X obj 381 454 metro 50;
-#X obj 381 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 381 432 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 43 150 mtof;
 #X obj 46 101 hsl 128 15 0 127 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7900 1;
+-1 -1 0 1;
 #X floatatom 43 124 5 0 0 0 - - -;
 #X text 180 101 slider 0-127;
 #X text 77 151 Converts midi note numbers to frequency;
-#X text 588 140 Turn signal processing (sound) on/off;
-#X text 510 459 The signal is written to the array every 50 ms to see
+#X text 419 118 Turn signal processing (sound) on/off;
+#X text 292 385 The signal is written to the array every 50 ms to see
 the waveform \; The array size is set to 500 in the properties.;
 #X obj 245 550 vu 15 120 empty empty -1 -8 0 10 -66577 -1 1 0;
 #X obj 243 495 env~;
@@ -104,11 +104,6 @@ the waveform \; The array size is set to 500 in the properties.;
 #X msg 139 336 \$1 50;
 #X text 181 294 Volume control. Knob is set to 0-1.;
 #X floatatom 189 334 5 0 0 0 - - -;
-#X obj 603 569 cnv 15 400 100 empty empty empty 20 12 0 14 -175625
--66577 0;
-#X text 630 607 Media Lab \, Department of Media;
-#X text 629 593 Sound and Music Computing - AAU-CPH Credits: SOPI Research
-Group;
 #X obj 246 191 cnv 15 200 60 empty empty empty 20 12 0 14 -231095 -66577
 0;
 #X floatatom 261 200 5 0 0 0 - - -;
@@ -117,18 +112,16 @@ Group;
 20 12 0 14 -33173 -262144 0;
 #X obj 262 220 osc~;
 #X obj 43 299 osc~ 220;
-#X text 631 622 Aalto University School of Arts \, Design and Architecture
-;
 #X obj 503 20 import flatgui/knob;
 #X obj 140 294 knob 32 32 0 1 0 0 empty empty empty 0 -8 0 8 -262144
--1 -1 2100 1;
+-1 -1 0 1;
 #X obj 381 482 tabwrite~ \$0-output;
 #X connect 2 0 1 0;
 #X connect 3 0 0 0;
 #X connect 3 0 0 1;
 #X connect 3 0 15 0;
-#X connect 3 0 39 0;
-#X connect 5 0 39 0;
+#X connect 3 0 35 0;
+#X connect 5 0 35 0;
 #X connect 6 0 5 0;
 #X connect 7 0 21 0;
 #X connect 8 0 9 0;
@@ -136,11 +129,11 @@ Group;
 #X connect 15 0 16 0;
 #X connect 16 0 14 0;
 #X connect 21 0 22 0;
-#X connect 22 0 35 0;
+#X connect 22 0 32 0;
 #X connect 23 0 3 1;
 #X connect 24 0 23 0;
-#X connect 31 0 34 0;
-#X connect 34 0 22 1;
-#X connect 35 0 3 0;
-#X connect 38 0 24 0;
-#X connect 38 0 26 0;
+#X connect 28 0 31 0;
+#X connect 31 0 22 1;
+#X connect 32 0 3 0;
+#X connect 34 0 24 0;
+#X connect 34 0 26 0;

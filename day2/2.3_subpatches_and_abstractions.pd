@@ -1,4 +1,4 @@
-#N canvas 346 368 682 726 10;
+#N canvas 102 22 620 475 10;
 #X obj 44 14 cnv 15 500 30 empty empty Subpatches_and_Abstractions
 20 12 0 14 -33173 -262144 0;
 #N canvas 667 226 785 335 subpatch 0;
@@ -23,21 +23,21 @@
 #X text 302 302 NOTE!!! - inlets an outlets are used in left to right
 order when viewed in main patch;
 #X restore 51 150 pd subpatch;
-#X obj 49 89 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 49 89 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 71 90 Subpatches;
 #X text 127 149 <- This is a subpatch;
 #X text 145 165 click it to open;
-#X obj 318 89 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 318 89 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 342 91 Abstraction;
 #X obj 327 149 ex_abs;
 #X text 393 164 click it to open;
 #X text 375 148 <- This is an abstraction;
-#X obj 321 242 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 321 242 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 334 242 Graph on parent;
-#X obj 49 242 cnv 15 190 20 empty empty empty 20 12 0 14 -33173 -262144
+#X obj 49 242 cnv 15 190 20 empty empty empty 20 12 0 14 -2867 -262144
 0;
 #X text 66 244 Dollar Signs Arguments;
 #X obj 52 377 dollarsign test 1 10;
@@ -56,19 +56,12 @@ order when viewed in main patch;
 #X connect 2 0 1 0;
 #X coords 0 -1 1 1 85 60 1 100 100;
 #X restore 329 344 pd graph_on_parent;
-#X text 328 267 1) Right click on empty space;
-#X text 328 280 2) select properties and click graph on parent;
+#X text 308 267 1) Right click on empty space;
+#X text 308 280 2) select properties and click graph on parent;
 #X text 341 426 Works on subpatches and abstractions!;
 #X obj 454 341 ex_abs_graphonparent;
 #X text 52 273 \$1 \, \$2 \, \$3 etc are used as;
 #X text 57 289 arguments in abstractions;
-#X text 328 293 3) any GUI element in the redbox appears;
-#X text 345 306 on the object box.;
-#X obj 219 492 cnv 15 400 100 empty empty empty 20 12 0 14 -175625
--66577 0;
-#X text 256 536 Media Lab \, Department of Media;
-#X text 255 522 Sound and Music Computing - AAU-CPH Credits: SOPI Research
-Group;
-#X text 257 551 Aalto University School of Arts \, Design and Architecture
-;
+#X text 308 293 3) any GUI element in the redbox appears;
+#X text 325 306 on the object box.;
 #X obj 52 322 dollarsign;

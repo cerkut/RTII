@@ -1,17 +1,17 @@
-#N canvas 30 22 852 788 10;
+#N canvas 0 22 698 617 10;
 #X declare -path .;
 #X declare -path day1;
 #X declare -path day2;
 #X declare -lib flatgui/knob;
 #X declare -lib pddp;
-#X obj 422 594 cnv 15 400 25 empty empty AAU_CPH_Credits: 20 12 1 14
+#X obj 258 515 cnv 15 400 25 empty empty AAU_CPH_Credits: 20 12 1 14
 -33173 -262144 0;
 #X obj 28 15 cnv 15 200 40 empty empty Session_1:_PD_Basics 20 12 1
 14 -33173 -262144 0;
 #X obj 486 16 declare -path .;
 #X obj 486 35 declare -path day1;
 #X obj 486 54 declare -path day2;
-#X text 421 622 SOPI Research Group \, Aalto University \, Finland
+#X text 257 543 SOPI Research Group \, Aalto University \, Finland
 ;
 #X obj 268 15 cnv 15 200 40 empty empty Click-it 20 12 1 14 -33173
 -262144 0;
@@ -38,3 +38,6 @@
 #X obj 267 341 cnv 15 200 40 empty empty Microphone 20 12 1 14 -33173
 -262144 0;
 #X obj 27 537 Machineomatic;
+#X obj 257 556 pddplink http://obiwannabe.co.uk/html/toys/machineomatic/machine-o-matic.html
+;
+#X text 256 569 fourMS \, University of Oslo \, Norway;
